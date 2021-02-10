@@ -1,0 +1,111 @@
+    function sas_get_responce(token, data) {​
+        var complete = false;
+        console.log(data);
+        pending_task = parseInt(data.pending_task);
+        console.log();
+        console.log("dif");
+        if (pending_task > 0) {​
+            console.log(pending_task);
+            
+            var pendingTask = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-count");
+            pendingTask.innerText(pending_task)
+
+            if (pending_task === 1) {​
+                var pendingHide = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-count-plural");
+                pendingHide.style.display = "none";
+
+                var pendingShow = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-count-singular");
+                pendingShow.style.display = "block";
+
+            }​ else {​
+                var pendingHide = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-count-plural");
+                pendingHide.style.display = "none";
+
+                var pendingShow = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-count-singular");
+                pendingShow.style.display = "block";
+            }​
+
+            var pendingMulti = document.querySelector(".sas-audit-generate-loader #sas-queue-note #sas-job-wait");
+            pendingMulti.innerText(pending_task * 5 + "s");
+
+            var pendingHide = document.querySelector(".sas-audit-generate-loader #sas-queue-note");
+                pendingHide.style.display = "block";
+
+            sas_widget_loader_set_status(2);
+
+        }​ else if (typeof data.screen_shoot != "undefined" && data.screen_shoot != "none" && data.screen_shoot != "done") {​
+            console.log("peyeche2");
+
+            var getImgAttr = document.querySelectorAll(".sas-audit-generate-loader .sas-analyze-screenshot-image img");
+
+            getImgAttr.getAttribute("src", data.screen_shoot);
+
+            getImgAttr.style.opacity = "1";
+
+            sas_widget_loader_set_status(4);
+
+        }​ else if (typeof data.finished != "undefined" && data.finished == "done") {​
+            console.log("peyeche");
+            var src = api_url+"/report/";
+            src = setUrlParameter(src, "id", data.widget_id);
+            src = setUrlParameter(src, "share", data.share_key);
+            src = setUrlParameter(src, "type", "lead");
+
+            var getIframe = document.querySelector(".sas-widget-model .sas-widget-model-inner iframe");
+            getIframe.getAttribute("src", src);
+
+            setTimeout(function () {​
+                var modelAddClass = document.querySelector(".sas-widget-model");
+                modelAddClass.classList.add("active");
+
+                sas_widget_loader_end();
+                var addClassBody = docoment.getElementsByTagName("BODY")[0];
+                addClassBody.classList.add("sas-widget-actived");
+
+            }​, 4000);
+
+            complete = true;
+
+        }​ else {​
+
+            var hideNote = document.querySelector(".sas-audit-generate-loader #sas-queue-note");
+            hideNote.style.display = "none";
+
+            sas_widget_loader_set_status(3);
+        }​
+        if (complete === false) {​
+            setTimeout(function() {​
+                var params = api_url+"/wp-json/seo/v1/lead/" + token;
+                fetch(params)
+                    .then(response => {​
+                        return response.json()
+                    }​)
+                    .then(data => {​
+                        if (data.code != "sucsess") {​
+
+                            var removeClass = document.querySelectorAll("#sas-audit-generate-loader .sas-analyze-error, #sas-widget-container .sas-analyze-error *");
+                            removeClass.classList.remove("sas-hide");
+                            setTimeout(function () {​
+                                var newCon = document.querySelector("#sas-widget-container");
+                                console.log(newCon);
+
+                                var widgetContainer = document.querySelector("#sas-widget-container");
+
+                                widgetContainer.parentElement.querySelector(".sas-widget-form-msg").innerHTML("<span class='error'>There are some error</span>");
+
+                                sas_widget_loader_end();
+
+                            }​, 2000);
+
+                        }​ else {​
+                            sas_get_responce(token, data.data.page_states);
+                        }​
+
+                    }​)
+                    .catch(err => {​
+
+                    }​)
+            }​, 2000);
+
+        }​
+    }​

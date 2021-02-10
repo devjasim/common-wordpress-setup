@@ -1,0 +1,323 @@
+@media screen and (max-width: 1199px) {
+  .salim__wrapper header#header .header__container .salim__element .single__element nav#nav ul li {
+    padding: 0 10px;
+  }
+  .salim__wrapper header#header .header__container .salim__element .single__element .contact {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 990.99px) and (max-width: 1200px) {
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left {
+    padding: 5px;
+    padding-right: 8px;
+  }
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left a span {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768.99px) and (max-width: 1200px) {
+  .planet-wrapper .main-content .planet-section.section-top-main {
+    padding-top: 50px !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .salim__heading.bfr {
+    margin-bottom: 70px !important;
+  }
+  .planet-wrapper .header-container .header-wrapper .planet-element {
+    position: relative;
+  }
+  img.max__150 {
+    max-width: 130%;
+  }
+  .planet-wrapper footer#footer .footer-container .footer-wrapper .showcase .foot-showcase {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .salim__heading.bfr {
+    margin-bottom: 50px;
+  }
+  .salim__wrapper .header__container .salim__element .single__element nav#nav {
+    padding-top: 40px;
+  }
+  .salim__wrapper .header__container .salim__element .single__element .contact {
+    display: inline-block;
+  }
+  .salim__wrapper .header__container .single__element.with__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 50vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 30px 35px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    display: block !important;
+    -webkit-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
+    overflow-y: auto;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul li {
+    display: block !important;
+    padding: 10px 0 !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul li a {
+    color: #000 !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul li.has__menu > a::before {
+    border-top: 6px solid #000 !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu {
+    position: initial !important;
+    background-color: none !important;
+    padding: 10px 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+    display: none !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu .item__column {
+    padding: 0 !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu::after {
+    content: none !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu > li {
+    padding-left: 70px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu > li:first-child {
+    padding-left: 0;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu ul.sub-menu li {
+    padding: 8px 0 !important;
+    padding-left: 30px !important;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu ul.sub-menu li a {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li > .sub-menu ul.sub-menu li a:after {
+    content: none;
+  }
+  .salim__wrapper .header__container .single__element.with__menu ul.main-menu > li.open__menu > .sub-menu {
+    display: block !important;
+  }
+  .salim__wrapper .header__container .mobile__menu {
+    display: block !important;
+  }
+  .salim__wrapper .header__container.nav-active .single__element.with__menu {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .salim__wrapper .header__container.nav-active .mobile__menu span {
+    background-color: #000 !important;
+  }
+  .salim__wrapper .header__container.nav-active .mobile__menu span:nth-last-of-type(1) {
+    visibility: hidden !important;
+    opacity: 0;
+  }
+  .salim__wrapper .header__container.nav-active .mobile__menu span:nth-child(1) {
+    -webkit-transform: rotate(44deg) !important;
+            transform: rotate(44deg) !important;
+    margin-top: 6px !important;
+  }
+  .salim__wrapper .header__container.nav-active .mobile__menu span:nth-child(2) {
+    -webkit-transform: rotate(-45deg) !important;
+            transform: rotate(-45deg) !important;
+    margin-top: -6px !important;
+  }
+  .salim__wrapper .header__container.nav-active .with__menu .contact strong {
+    color: #000 !important;
+  }
+  .salim__wrapper .header__container.nav-active .with__menu .contact span {
+    color: #2233aa !important;
+  }
+  .salim__wrapper .single__element .contact {
+    margin-left: 0 !important;
+    margin-top: 30px;
+  }
+  .planet-wrapper .main-content .planet-section.section-top-main .row .content-fixed .planet-img {
+    margin-top: 50px;
+  }
+  .planet-wrapper .main-content .section-top-inner {
+    padding-top: 260px;
+  }
+  .planet-wrapper .main-content .section-top-inner .row.flex__center {
+    margin-top: 0;
+  }
+  .planet-wrapper .main-content .section-software .section-software .section-image img {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+  .planet-wrapper .main-content .contact-us .section-image {
+    margin: 0 auto;
+  }
+  .planet-wrapper .main-content .contact-us .section-image img {
+    margin: 0 auto;
+  }
+  .planet-wrapper footer#footer .footer-container {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .tab__buttons .paddles button {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px !important;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .salim__section {
+    padding: 60px 0;
+    padding-bottom: 130px;
+  }
+  .bg__gray::after {
+    height: 90px;
+  }
+  .bg__white::after {
+    height: 90px;
+  }
+  .salim__wrapper .main__content .salim__section.section__top__main {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  .salim__wrapper .main__content .section__product .section__product__full .section__cnt .contents {
+    margin-bottom: 30px;
+  }
+  .salim__wrapper .section__inner .section__cnt {
+    margin-bottom: 30px;
+  }
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left img {
+    max-width: 50px;
+  }
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left span {
+    font-size: 13px;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__head h2 {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__content {
+    margin-top: 30px;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__content .flex__item ul li {
+    display: block;
+    padding: 0px 20px;
+    margin: 10px 0;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__content .flex__item ul li:nth-child(odd) {
+    background-color: #f2f3f3;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__content .flex__item ul li strong {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .salim__wrapper .main__content.about__page .section__info .info__card .info__content .flex__item ul li p {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    border-left: none;
+    padding-left: 0;
+  }
+  .salim__wrapper .main__content.about__page .career__section .job__post .sjb-listing .list-view {
+    display: block;
+  }
+  .salim__wrapper .main__content.about__page .career__section .job__post .sjb-listing .list-view .list-data {
+    margin-bottom: 30px;
+  }
+  .salim__wrapper footer#footer {
+    padding-bottom: 50px;
+  }
+  .salim__wrapper .main__content .section__product .all__products .product__table .product__list ul > li {
+    display: block;
+  }
+  .salim__wrapper .main__content .section__product .all__products .product__table .product__list ul > li .single__item:nth-child(1) span {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .line__shape {
+    display: none !important;
+  }
+  .shape img {
+    max-width: 50px;
+  }
+  .shape.circle__one {
+    top: -20px !important;
+    left: 0 !important;
+  }
+  .shape.circle__two {
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left img {
+    max-width: 40px;
+  }
+  .salim__wrapper header#header .header__container .salim__element .single__element .logo__left span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .bg__gray::after {
+    height: 80px;
+  }
+  .bg__white::after {
+    height: 80px;
+  }
+  .salim__wrapper #container .sjb-detail .company__logo a img {
+    max-width: 100%;
+  }
+  .salim__wrapper #container .sjb-detail .row.no-gutters table td {
+    white-space: initial;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
